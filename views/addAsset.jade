@@ -1,0 +1,25 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Add Asset
+    link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css")
+  body
+    .container
+      h1 Add Asset
+      form(method="POST" action="/addAsset")
+        .form-group
+          label(for="serialNumber") Serial Number:
+          input#serialNumber.form-control(type="text", name="serialNumber", required)
+        .form-group
+          label(for="make") Make:
+          input#make.form-control(type="text", name="make", required)
+        .form-group
+          label(for="model") Model:
+          input#model.form-control(type="text", name="model", required)
+        .form-group
+          label(for="type") Type:
+          input#type.form-control(type="text", name="type", required)
+        button.btn.btn-primary(type="submit") Add Asset

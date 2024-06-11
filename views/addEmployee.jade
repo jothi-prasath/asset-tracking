@@ -1,0 +1,24 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Add Employee
+    link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css")
+  body
+    .container
+      h1 Add Employee
+      form(method="POST" action="/addEmployee")
+        .form-group
+          label(for="name") Name:
+          input#name.form-control(type="text", name="name", required)
+        .form-group
+          label(for="email") Email:
+          input#email.form-control(type="email", name="email", required)
+        .form-group
+          label(for="isActive") Active:
+          select#isActive.form-control(name="isActive", required)
+            option(value="true") Yes
+            option(value="false") No
+        button.btn.btn-primary(type="submit") Add Employee
